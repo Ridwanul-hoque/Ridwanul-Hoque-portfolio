@@ -1,0 +1,66 @@
+@keyframes marquee {
+  0% { transform: translateX(0%); }
+  100% { transform: translateX(-50%); }
+}
+.animate-marquee {
+  animation: marquee 22s linear infinite;
+}
+
+
+/* ---- Resume Specific Layout & Variable Additions ---- */
+  .bg-surface { background-color: rgba(255, 255, 255, 0.02); }
+  .border-ink-border { border-color: rgba(255, 255, 255, 0.07); }
+  .bg-ink-border { background-color: rgba(255, 255, 255, 0.08); }
+  
+  /* Tab Panel Transition States */
+  .tab-content-panel {
+    display: none;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.4s ease-out, transform 0.4s ease-out;
+  }
+  .tab-content-panel.active-panel {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .custom-scrollbar::-webkit-scrollbar {
+    height: 5px;
+    width: 5px;
+  }
+  .custom-scrollbar::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.02);
+    border-radius: 10px;
+  }
+  .custom-scrollbar::-webkit-scrollbar-thumb {
+    background: rgba(255, 122, 61, 0.3);
+    border-radius: 10px;
+  }
+  .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 122, 61, 0.6);
+  }
+
+
+  /* Replicating Framer Motion's whileHover={{ y: -4 }} cleanly */
+.back-to-top-btn {
+  transform: translateY(0px);
+  will-change: transform;
+}
+
+.back-to-top-btn:hover {
+  transform: translateY(-4px);
+}
+
+/* Hide system default scrollbars globally */
+html, body {
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+}
+
+html::-webkit-scrollbar,
+body::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
+  width: 0 !important;
+  height: 0 !important;
+}
