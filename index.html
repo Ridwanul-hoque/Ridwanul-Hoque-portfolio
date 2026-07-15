@@ -600,7 +600,8 @@
 
           <!-- CTAs -->
           <div class="reveal mt-9 flex flex-wrap items-center gap-4" style="animation-delay:1s">
-            <a href="./assets/RIDWANUL HOQUE_RESUME_FrontendDev.pdf" download="Ridwanul_Hoque_Resume.pdf" data-cursor="hover"
+            <a href="./assets/RIDWANUL HOQUE_RESUME_FrontendDev.pdf" download="Ridwanul_Hoque_Resume.pdf"
+              data-cursor="hover"
               class="group inline-flex items-center gap-2 rounded-full bg-gradient-orange px-7 py-3.5 font-semibold text-white transition-transform hover:scale-105 glow-orange">
               <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
                 stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -640,40 +641,45 @@
           </div>
         </div>
 
-        <!-- Right — animated monolith, with the hover-card-style entrance on :hover -->
-        <div class="reveal-scale relative hidden items-center justify-center lg:col-span-5 lg:flex"
+
+        <div
+          class="reveal-scale relative flex items-center justify-center lg:col-span-5 mt-8 lg:mt-0 w-full overflow-visible"
           style="animation-delay:0.6s">
-          <div id="tilt-monolith" class="monolith-wrap relative h-[420px] w-[420px]" data-cursor="hover">
-            <div class="monolith-container">
-              <div class="hover-halo"></div>
+          <!-- Scale wrapper: shrinks the entire asset to 70% on base mobile, 85% on small tablets, and 100% on desktop -->
+          <div class="scale-[0.70] sm:scale-[0.85] lg:scale-100 transition-transform duration-300 origin-center">
+            <div id="tilt-monolith" class="monolith-wrap relative h-[420px] w-[420px]" data-cursor="hover">
+              <div class="monolith-container">
+                <div class="hover-halo"></div>
 
-              <!-- Outer track line (for rotating lines only) -->
-              <div class="absolute inset-0 animate-spin-slow rounded-full border border-orange/20"></div>
-              <!-- Inner track line (for rotating lines only) -->
-              <div class="absolute inset-8 animate-spin-slow-reverse rounded-full border border-orange-ember/15"></div>
-              <div class="absolute inset-16 rounded-full border border-orange/10"></div>
-
-              <!-- Static tracks positioning the word badges via custom trigonometry -->
-              <span id="badge-react" class="tech-badge">React</span>
-              <span id="badge-next" class="tech-badge">Next</span>
-              <span id="badge-ts" class="tech-badge">TS</span>
-              <span id="badge-node" class="tech-badge">Node</span>
-
-              <!-- core -->
-              <div
-                class="core absolute inset-24 grid place-items-center rounded-full bg-gradient-to-br from-orange to-orange-deep glow-orange-strong">
-                <div class="text-center">
-                  <div class="font-display text-5xl font-black text-white">RH</div>
-                  <div class="mt-1 font-mono text-[10px] tracking-widest text-white/80">RIDWANUL HOQUE</div>
+                <!-- Outer track line -->
+                <div class="absolute inset-0 animate-spin-slow rounded-full border border-orange/20"></div>
+                <!-- Inner track line -->
+                <div class="absolute inset-8 animate-spin-slow-reverse rounded-full border border-orange-ember/15">
                 </div>
-              </div>
-              <!-- orbiting dots -->
-              <div class="absolute inset-0 animate-spin-slow">
-                <span
-                  class="absolute left-1/2 top-0 h-3 w-3 -translate-x-1/2 rounded-full bg-orange glow-orange"></span>
-              </div>
-              <div class="absolute inset-8 animate-spin-slow-reverse">
-                <span class="absolute left-1/2 top-0 h-2 w-2 -translate-x-1/2 rounded-full bg-orange-golden"></span>
+                <div class="absolute inset-16 rounded-full border border-orange/10"></div>
+
+                <!-- Static tracks positioning the word badges -->
+                <span id="badge-react" class="tech-badge">React</span>
+                <span id="badge-next" class="tech-badge">Next</span>
+                <span id="badge-ts" class="tech-badge">TS</span>
+                <span id="badge-node" class="tech-badge">Node</span>
+
+                <!-- core -->
+                <div
+                  class="core absolute inset-24 grid place-items-center rounded-full bg-gradient-to-br from-orange to-orange-deep glow-orange-strong">
+                  <div class="text-center">
+                    <div class="font-display text-5xl font-black text-white">RH</div>
+                    <div class="mt-1 font-mono text-[10px] tracking-widest text-white/80">RIDWANUL HOQUE</div>
+                  </div>
+                </div>
+                <!-- orbiting dots -->
+                <div class="absolute inset-0 animate-spin-slow">
+                  <span
+                    class="absolute left-1/2 top-0 h-3 w-3 -translate-x-1/2 rounded-full bg-orange glow-orange"></span>
+                </div>
+                <div class="absolute inset-8 animate-spin-slow-reverse">
+                  <span class="absolute left-1/2 top-0 h-2 w-2 -translate-x-1/2 rounded-full bg-orange-golden"></span>
+                </div>
               </div>
             </div>
           </div>
@@ -1467,10 +1473,12 @@
 
             <!-- Card Cover Image Framework -->
             <div class="relative aspect-[16/10] overflow-hidden shrink-0 bg-neutral-900">
-              <img src="./assets/knot banner.png" alt="Matrimonial Website"
+              <!-- FIXED: URL encoded the space in the filename -->
+              <img src="./assets/knot%20banner.png" alt="Matrimonial Website"
                 class="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105" />
               <div class="absolute inset-0 bg-gradient-to-t from-surface via-surface/30 to-transparent"></div>
-              <div class="absolute right-4 top-4 flex flex-wrap justify-end gap-2">
+              <!-- FIXED: Added z-30 to stack cleanly above the absolute gradient mask layers -->
+              <div class="absolute right-4 top-4 z-30 flex flex-wrap justify-end gap-2">
                 <span
                   class="rounded-full border border-orange/30 bg-black/50 px-2.5 py-1 font-mono text-[10px] text-orange backdrop-blur-sm">React</span>
                 <span
@@ -1512,10 +1520,12 @@
 
             <!-- Card Cover Image Framework -->
             <div class="relative aspect-[16/10] overflow-hidden shrink-0 bg-neutral-900">
-              <img src="./assets/pet banner.png" alt="Pets Related Website"
+              <!-- FIXED: URL encoded the space in the filename -->
+              <img src="./assets/pet%20banner.png" alt="Pets Related Website"
                 class="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105" />
               <div class="absolute inset-0 bg-gradient-to-t from-surface via-surface/30 to-transparent"></div>
-              <div class="absolute right-4 top-4 flex flex-wrap justify-end gap-2">
+              <!-- FIXED: Added z-30 to stack cleanly above the absolute gradient mask layers -->
+              <div class="absolute right-4 top-4 z-30 flex flex-wrap justify-end gap-2">
                 <span
                   class="rounded-full border border-orange/30 bg-black/50 px-2.5 py-1 font-mono text-[10px] text-orange backdrop-blur-sm">Gemini
                   AI</span>
@@ -1558,10 +1568,12 @@
 
             <!-- Card Cover Image Framework -->
             <div class="relative aspect-[16/10] overflow-hidden shrink-0 bg-neutral-900">
-              <img src="./assets/crowd banner.png" alt="Crowdfunding Platform"
+              <!-- FIXED: URL encoded the space in the filename -->
+              <img src="./assets/crowd%20banner.png" alt="Crowdfunding Platform"
                 class="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105" />
               <div class="absolute inset-0 bg-gradient-to-t from-surface via-surface/30 to-transparent"></div>
-              <div class="absolute right-4 top-4 flex flex-wrap justify-end gap-2">
+              <!-- FIXED: Added z-30 to stack cleanly above the absolute gradient mask layers -->
+              <div class="absolute right-4 top-4 z-30 flex flex-wrap justify-end gap-2">
                 <span
                   class="rounded-full border border-orange/30 bg-black/50 px-2.5 py-1 font-mono text-[10px] text-orange backdrop-blur-sm">React</span>
                 <span
@@ -1655,11 +1667,14 @@
         </span>
       </a>
 
-      <div class="mt-12 grid grid-cols-1 gap-12 lg:grid-cols-2">
+      <!-- RESPONSIVE FIX: Max-width keeps blocks uniform on mobile, flexing centers them together -->
+      <div
+        class="mt-12 flex flex-col items-center justify-center gap-12 lg:grid lg:grid-cols-2 lg:items-stretch w-full max-w-xl mx-auto lg:max-w-none">
 
         <!-- Interactive Contact Message Form Card -->
+        <!-- FIXED: Added lg: before -translate-x-7 so mobile stays centered, desktop slides in -->
         <div
-          class="rounded-2xl border border-ink-border bg-surface p-8 opacity-0 -translate-x-7 transition-all duration-700 ease-out animate-on-scroll hover:border-orange/50 hover:shadow-[0_0_30px_rgba(249,115,22,0.15)]">
+          class="w-full rounded-2xl border border-ink-border bg-surface p-8 opacity-0 lg:-translate-x-7 transition-all duration-700 ease-out animate-on-scroll hover:border-orange/50 hover:shadow-[0_0_30px_rgba(249,115,22,0.15)] text-left">
           <h3 class="font-display text-2xl font-bold text-white">
             Send a Message
           </h3>
@@ -1710,7 +1725,6 @@
               </label>
             </div>
 
-
             <button type="submit" id="submit-btn" data-cursor="hover"
               class="relative w-full overflow-hidden rounded-lg bg-gradient-orange py-3.5 font-semibold text-white transition-transform hover:scale-[1.02] disabled:opacity-80 glow-orange">
               <span id="btn-state-default" class="inline-flex items-center gap-2 justify-center w-full">
@@ -1730,12 +1744,13 @@
           </form>
         </div>
 
-        <!-- Info Columns + Socials Matrix Row + Newsletter Form Frame -->
+        <!-- Info Columns + Socials Matrix Row -->
+        <!-- FIXED: Added lg: before translate-x-7 so mobile stays centered, desktop slides in from the right -->
         <div
-          class="flex flex-col justify-between gap-8 opacity-0 translate-x-7 transition-all duration-700 delay-150 ease-out animate-on-scroll">
+          class="w-full flex flex-col justify-between gap-8 opacity-0 lg:translate-x-7 transition-all duration-700 delay-150 ease-out animate-on-scroll items-stretch text-left">
 
           <!-- Info Cards Hub List -->
-          <div class="space-y-4">
+          <div class="space-y-4 w-full">
             <!-- Map Pin Info Item -->
             <div
               class="group flex items-start gap-4 rounded-xl border border-ink-border bg-surface p-5 transition-all hover:border-orange/50 hover:shadow-[0_0_25px_rgba(249,115,22,0.12)]">
@@ -1766,7 +1781,7 @@
               </div>
               <div>
                 <div class="font-mono text-[10px] uppercase tracking-widest text-ink-mute">Email</div>
-                <div class="mt-0.5 text-sm text-white">ridwanul.hoque1106@gmail.com</div>
+                <div class="mt-0.5 lg:text-sm text-xs text-white">ridwanul.hoque1106@gmail.com</div>
               </div>
             </a>
 
@@ -1826,20 +1841,16 @@
 
           <!-- Newsletter Interactive Component Card -->
           <div
-            class="rounded-xl border border-ink-border bg-surface p-6 transition-all hover:border-orange/50 hover:shadow-[0_0_25px_rgba(249,115,22,0.12)]">
+            class="w-full rounded-xl border border-ink-border bg-surface p-6 transition-all hover:border-orange/50 hover:shadow-[0_0_25px_rgba(249,115,22,0.12)] text-left">
             <div class="font-display text-base font-semibold text-white">Newsletter</div>
             <p class="mt-1 text-xs text-ink-soft">Subscribe for the latest updates and insights.</p>
 
-            <form id="newsletter-form" action="https://formspree.io/f/mojgqnpy" method="POST" class="mt-4 flex gap-2">
-              <!-- Changing subject header so you immediately know it's a subscriber in your inbox -->
-              <input type="hidden" name="_subject" value="New Portfolio Newsletter Subscriber!">
-
-              <!-- FIXED: Changed name="newsletter_email" to name="email" -->
+            <form id="newsletter-form" action="https://formspree.io/f/mojgqnpy" method="POST"
+              class="mt-4 flex flex-col sm:flex-row gap-2 w-full">
               <input type="email" id="newsletter-email" name="email" required placeholder="Type Your Email"
-                class="w-full rounded-lg border border-ink-border bg-black/40 px-4 py-2.5 text-sm text-white outline-none transition-colors focus:border-orange focus:ring-1 focus:ring-orange" />
-
+                class="w-full rounded-lg border border-ink-border bg-black/40 px-4 py-2.5 text-sm text-white outline-none transition-colors focus:border-orange text-left" />
               <button type="submit" id="newsletter-btn" data-cursor="hover"
-                class="shrink-0 rounded-lg bg-gradient-orange px-4 py-2.5 text-sm font-semibold text-white glow-orange">
+                class="shrink-0 rounded-lg bg-gradient-orange px-4 py-2.5 text-sm font-semibold text-white glow-orange w-full sm:w-auto">
                 Subscribe
               </button>
             </form>
@@ -1865,16 +1876,18 @@
           Ridwanul Hoque
         </span>
       </div>
-      <p class="font-mono text-xs tracking-wide text-ink-mute flex items-center gap-1">
+      <p class="block text-center font-mono text-xs tracking-wide text-ink-mute order-2 md:order-none">
         © <span id="current-year">2026</span> Ridwanul. Crafted with
-        <!-- Lucide Heart Icon Replica -->
-        <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 24 24" fill="none"
-          stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-          class="inline text-orange fill-orange/20">
-          <path
-            d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z" />
-        </svg>
-        & code.
+        <span class="inline-flex items-center gap-1 align-middle">
+          <!-- Lucide Heart Icon Replica -->
+          <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+            class="text-orange fill-orange/20">
+            <path
+              d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z" />
+          </svg>
+        </span>
+        &amp; code.
       </p>
       <button id="back-to-top" data-cursor="hover" aria-label="Back to top"
         class="back-to-top-btn inline-flex items-center gap-2 rounded-full border border-orange/40 px-4 py-2 font-mono text-xs text-orange transition-all duration-300 hover:bg-gradient-orange hover:text-white hover:glow-orange">
